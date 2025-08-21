@@ -97,47 +97,47 @@ final class SignUpView: UIView, BaseViewProtocol {
     func setLayout() {
         idTitleLabel.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide).inset(20)
-            $0.leading.equalToSuperview().inset(24)
+            $0.leading.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         idTextField.snp.makeConstraints {
             $0.top.equalTo(idTitleLabel.snp.bottom).offset(8)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(24)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         passwordTitleLabel.snp.makeConstraints {
             $0.top.equalTo(idTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(24)
+            $0.leading.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         passwordTextField.snp.makeConstraints {
             $0.top.equalTo(passwordTitleLabel.snp.bottom).offset(8)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(24)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         passwordCheckTitleLabel.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(24)
+            $0.leading.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         passwordCheckTextField.snp.makeConstraints {
             $0.top.equalTo(passwordCheckTitleLabel.snp.bottom).offset(8)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(24)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         nicknameTitleLabel.snp.makeConstraints {
             $0.top.equalTo(passwordCheckTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(24)
+            $0.leading.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         nicknameTextField.snp.makeConstraints {
             $0.top.equalTo(nicknameTitleLabel.snp.bottom).offset(8)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(24)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(24)
         }
         
         signUpButton.snp.makeConstraints {
-            $0.directionalHorizontalEdges.equalToSuperview().inset(24)
             $0.top.equalTo(nicknameTextField.snp.bottom).offset(50)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(24)
         }
     }
 }
