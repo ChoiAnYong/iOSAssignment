@@ -36,7 +36,7 @@ final class StartView: UIView, BaseViewProtocol {
     func setLayout() {
         startButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.directionalHorizontalEdges.equalToSuperview().inset(24)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(24)
         }
     }
 }
