@@ -11,9 +11,9 @@ import RxSwift
 import RxCocoa
 
 final class StartViewModel: ViewModelType {
-    private let userUseCase: UserUseCase
+    private let userUseCase: UserUseCaseProtocol
     
-    init(userUseCase: UserUseCase) {
+    init(userUseCase: UserUseCaseProtocol) {
         self.userUseCase = userUseCase
     }
     
