@@ -35,8 +35,8 @@ final class StartViewController: UIViewController {
     }
 }
 
-extension StartViewController {
-    private func bindViewModel() {
+private extension StartViewController {
+    func bindViewModel() {
         let input = StartViewModel.Input(
             startTrigger: rootView.startButton.rx.tap.asObservable()
         )
@@ -45,13 +45,14 @@ extension StartViewController {
         
         output.startResult
             .emit(onNext: { [weak self] isLogined in
+                guard let self else { return }
                 if isLogined {
-                    self?.navigationController?.setViewControllers(
+                    self.navigationController?.setViewControllers(
                         [DIContainer.shared.makeLoginSuccessViewController()],
                         animated: false
                     )
                 } else {
-                    self?.navigationController?.pushViewController(
+                    self.navigationController?.pushViewController(
                         DIContainer.shared.makeSignUpViewController(),
                         animated: true
                     )
